@@ -7,3 +7,12 @@
 #greeting-container {
   margin-top: 20px;
 }
+
+img {
+    height: 350px;
+    width: 300px;
+}
+
+body {
+    background-color: rgb(248, 207, 221);
+}
