@@ -26,3 +26,12 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+/** Fetches  a hardcoded string from the server and adds it to the page. */
+async function showString() {
+    const responseFromServer = await fetch('/hello');
+    const textFromResponse = await responseFromServer.text();
+  
+    const stringContainer = document.getElementById('string-container');
+    stringContainer.innerText = textFromResponse;
+}
