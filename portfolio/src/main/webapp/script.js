@@ -35,3 +35,9 @@ async function showString() {
     const stringContainer = document.getElementById('string-container');
     stringContainer.innerText = textFromResponse;
 }
+
+function createMap() {
+    const map = new google.maps.Map(
+        document.getElementById('map'),
+        {center: {lat: 40.76060063892388, lng:-73.98365302868159}, zoom: 12});
+  }
