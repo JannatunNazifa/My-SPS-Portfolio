@@ -5,12 +5,13 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnp1UXlnsqatkukr7fKtNKKx2wtn3heEE"></script>
   </head>
-  <body>
+  <body onload="createMap();">
     <div id="content">
       <h1>Nazifa's Portfolio</h1>
       <p>This is my portfolio.</p>
-      <p>I am rising junior at CUNY Hunter college majoring in Computer Science!
+      <p>I am a rising junior at CUNY Hunter college majoring in Computer Science!
          I enjoy coffee, painting and trying new cuisines.
       </p>
       <img src="/images/DSC08573.jpg" />
@@ -20,12 +21,13 @@
       <p>Click here to get a random fact about me:</p>
       <button onclick="addRandomGreeting()">Click</button>
       <div id="greeting-container"></div>
-      <p>Click this button to see a greeting!</p>
-      <button onclick="showSring();">
-      Get greeting
+      <p>Click this button before you leave!</p>
+      <button onclick="showString()">
+      Click
       </button>
       <p id="string-container"></p>
-
+      <p id="title">My Favourite Coffee Shops</p>
+      <div id="map"></div>
     </div>
   </body>
 </html>

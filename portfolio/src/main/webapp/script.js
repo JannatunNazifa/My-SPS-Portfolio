@@ -35,3 +35,42 @@ async function showString() {
     const stringContainer = document.getElementById('string-container');
     stringContainer.innerText = textFromResponse;
 }
+
+function createMap() {
+    const map = new google.maps.Map(
+        document.getElementById('map'),
+        {center: {lat: 40.76060063892388, lng:-73.98365302868159}, zoom: 12});
+    
+    const birch = new google.maps.Marker({
+        position: {lat:40.76406941409203, lng: -73.96651094290358},
+        map: map,
+        title: 'Birch Coffee'
+        });
+
+    const bluebottle = new google.maps.Marker({
+        position: {lat:40.719883932218984, lng: -74.00210380567277},
+        map: map,
+        title: 'Blue Bottle Coffee'
+        });
+
+    const variety = new google.maps.Marker({
+        position: {lat:40.779899628302715,lng: -73.95644187940572},
+        map: map,
+        title: 'Variety Coffee Roasters'
+        });
+
+    const birch_window =
+        new google.maps.InfoWindow({content: 'Birch Coffee'});
+        birch_window.open(map, birch);
+
+    const blue_window =
+        new google.maps.InfoWindow({content: 'Blue Bottle Coffee'});
+        blue_window.open(map, bluebottle);
+
+    const variety_window =
+        new google.maps.InfoWindow({content: 'Variety Coffee Roasters'});
+        variety_window.open(map, variety);
+  }
+
+  
+
