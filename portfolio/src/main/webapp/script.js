@@ -41,35 +41,35 @@ function createMap() {
         document.getElementById('map'),
         {center: {lat: 40.76060063892388, lng:-73.98365302868159}, zoom: 12});
     
-    const Birch = new google.maps.Marker({
-    position: {lat:40.76406941409203, lng: -73.96651094290358},
-    map: map,
-    title: 'Birch Coffee'
-    });
+    const birch = new google.maps.Marker({
+        position: {lat:40.76406941409203, lng: -73.96651094290358},
+        map: map,
+        title: 'Birch Coffee'
+        });
 
-    const Bluebottle = new google.maps.Marker({
+    const bluebottle = new google.maps.Marker({
         position: {lat:40.719883932218984, lng: -74.00210380567277},
         map: map,
         title: 'Blue Bottle Coffee'
         });
 
-        const Variety = new google.maps.Marker({
-            position: {lat:40.779899628302715,lng: -73.95644187940572},
-            map: map,
-            title: 'Variety Coffee Roasters'
-            });
+    const variety = new google.maps.Marker({
+        position: {lat:40.779899628302715,lng: -73.95644187940572},
+        map: map,
+        title: 'Variety Coffee Roasters'
+        });
 
-        const BirchWindow =
+    const birch_window =
         new google.maps.InfoWindow({content: 'Birch Coffee'});
-        BirchWindow.open(map, Birch);
+        birch_window.open(map, birch);
 
-        const BlueWindow =
+    const blue_window =
         new google.maps.InfoWindow({content: 'Blue Bottle Coffee'});
-        BlueWindow.open(map, Bluebottle);
+        blue_window.open(map, bluebottle);
 
-        const VarietyWindow =
+    const variety_window =
         new google.maps.InfoWindow({content: 'Variety Coffee Roasters'});
-        VarietyWindow.open(map, Variety);
+        variety_window.open(map, variety);
   }
 
   
